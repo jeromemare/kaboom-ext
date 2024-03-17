@@ -41,9 +41,13 @@ function distance(obj1, obj2) {
  * @return l'angle entre les deux objets en degrés
  */
 function angleTowardsObjects(obj1, obj2) {
-  const angleInRad = Math.atan((obj2.pos.y - obj1.pos.y) / (obj2.pos.x - obj1.pos.x))
+  angleTowardsPos(obj1.pos, obj2.pos)
+}
+
+function angleTowardsPos (pos1, pos2) {
+  const angleInRad = Math.atan((pos1.y - pos2.y) / (pos1.x - pos2.x))
   const angle = rad2Deg(angleInRad)
-  return angle
+  return pos1.x >= pos2.x ? angle - 180 : angle
 }
 
 /**
@@ -111,6 +115,29 @@ export function pointTowards(objectToFollow) {
         this.angle = angleTowardsObjects(this, nextObject)
       }
 
+    }
+  }
+}
+
+export function pointToMouse ({ once = false } = {}) {
+  const k = getKaboomContext(this)
+  
+  return {
+    id: 'point-to-mouse',
+    // Ajout du composant au sprite
+    add() {
+      if (once) {
+        this.updateAngle()
+      }
+    },
+    // Mise à jour du dessin du sprite à l'écran
+    update() {
+      if (!once) {
+        this.updateAngle()
+      }
+    },
+    updateAngle () {
+      this.angle = angleTowardsPos(this.pos, k.mousePos())
     }
   }
 }
