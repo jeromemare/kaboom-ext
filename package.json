@@ -15,7 +15,7 @@
   },
 	"repository": "github:jeromemare/kaboom-ext",
   "description": "KaboomJS Extensions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Jérôme Mare <jerome.mare@gmail.com>",
   "license": "ISC"
 }
