@@ -1,17 +1,17 @@
-# Kaboom Plugins
+# Kaboom Ext
 
 KaboomJS Extensions
 
 ## install
 
 ```sh
-$ npm i --save kaboom-plugins
+$ npm i --save kaboom-ext
 ```
 
 ## Usage
 
 ```js
-import { moveable } from 'kaboom-plugins'
+import { moveable } from 'kaboom-ext'
 
 // Add moveable component to your game object
 k.add([

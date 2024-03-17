@@ -1,5 +1,5 @@
 {
-  "name": "kaboom-plugins",
+  "name": "kaboom-ext",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,11 @@
   "devDependencies": {
     "esbuild": "^0.20.1"
   },
-  "description": "- `src` - source code for your kaboom project - `www` - distribution folder, contains your index.html, built js bundle and static assets",
+	"repository": {
+    "type": "git",
+    "url": "https://gitlab.codep.inetum.world/codep-software-karteis/karteis/karteis-tools.git"
+  },
+  "description": "KaboomJS Extensions",
   "version": "1.0.0",
   "author": "Jérôme Mare <jerome.mare@gmail.com>",
   "license": "ISC"
