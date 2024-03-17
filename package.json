@@ -13,10 +13,7 @@
   "devDependencies": {
     "esbuild": "^0.20.1"
   },
-	"repository": {
-    "type": "git",
-    "url": "https://gitlab.codep.inetum.world/codep-software-karteis/karteis/karteis-tools.git"
-  },
+	"repository": "github:jeromemare/kaboom-ext",
   "description": "KaboomJS Extensions",
   "version": "1.0.0",
   "author": "Jérôme Mare <jerome.mare@gmail.com>",
